@@ -1,0 +1,69 @@
+media:
+  - name: images
+    label: 사진
+    input: media/images
+    output: /media/images
+    categories: [image]
+    rename: safe
+  - name: videos
+    label: 휴대폰 영상 (작은 MP4 권장)
+    input: media/videos
+    output: /media/videos
+    categories: [video]
+    extensions: [mp4, webm, mov]
+    rename: safe
+content:
+  - name: works
+    label: 작품 관리
+    type: collection
+    path: _works
+    format: yaml-frontmatter
+    view:
+      fields: [title, category, year]
+      primary: title
+    fields:
+      - name: title
+        label: 한국어 제목
+        type: string
+        required: true
+      - name: french_title
+        label: 프랑스어 제목 (선택)
+        type: string
+      - name: category
+        label: 분류
+        type: select
+        required: true
+        options:
+          values:
+            - name: essais
+              label: 에세이
+            - name: fiction
+              label: 소설
+            - name: projets
+              label: 프로젝트
+      - name: year
+        label: 연도
+        type: string
+      - name: note
+        label: 작품 설명 (선택)
+        type: text
+      - name: video
+        label: 동영상 (작은 파일)
+        type: file
+        options:
+          media: videos
+          extensions: [mp4, webm, mov]
+      - name: cover
+        label: 사진 (선택)
+        type: image
+        options:
+          media: images
+      - name: published
+        label: 공개하기 (꺼두면 임시 저장)
+        type: boolean
+      - name: body
+        label: 한국어 본문
+        type: rich-text
+      - name: french_body
+        label: 프랑스어 번역 (선택)
+        type: rich-text
