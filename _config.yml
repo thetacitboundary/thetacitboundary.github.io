@@ -1,0 +1,9 @@
+title: The Tacit Boundary
+url: "https://thetacitboundary.github.io"
+baseurl: ""
+markdown: kramdown
+collections:
+  works:
+    output: false
+exclude:
+  - README.md
