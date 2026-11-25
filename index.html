@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>The Tacit Boundary</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;1,400;1,500&family=Noto+Serif+KR:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#dedad3; --ink:#2a2723; --soft:#7a746b; --line:#bdb7ad; --accent:#9a625c;
+  --fr:"Cormorant Garamond","Times New Roman",serif;
+  --ko:"Noto Serif KR","Nanum Myeongjo","Apple Myungjo",serif;
+  color-scheme:light;box-sizing:border-box;
+  padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px);
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#1f1d1a;--ink:#e6e1d8;--soft:#9d978c;--line:#3d3a35;--accent:#d29a92;color-scheme:dark}}
+:root[data-theme="dark"]{--bg:#1f1d1a;--ink:#e6e1d8;--soft:#9d978c;--line:#3d3a35;--accent:#d29a92;color-scheme:dark}
+*{box-sizing:border-box}
+html{scroll-padding-top:env(safe-area-inset-top,0px)}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--ko);font-weight:400;font-size:17px;line-height:1.95;word-break:keep-all;overflow-wrap:break-word;-webkit-text-size-adjust:100%}
+a{color:inherit}
+:focus-visible{outline:2px solid var(--accent);outline-offset:3px}
+.wrap{max-width:680px;margin:0 auto;padding:20px 24px 72px}
+
+/* header */
+.brand{display:block;font-family:var(--fr);font-style:italic;font-size:22px;line-height:1.2;text-decoration:none;margin-bottom:14px}
+body.home .brand{display:none}
+nav{display:flex;gap:26px;border-bottom:1px solid var(--line);padding-bottom:10px}
+nav a{text-decoration:none;display:block;line-height:1.35;padding-bottom:4px;border-bottom:1px solid transparent;margin-bottom:-11px}
+nav .k{display:block;font-size:17px}
+nav .f{display:block;font-family:var(--fr);font-style:italic;font-size:11.5px;color:var(--soft)}
+nav a[aria-current="page"],nav a:hover{border-bottom-color:var(--accent)}
+
+/* typography scale */
+.fr{font-family:var(--fr);font-style:italic;font-weight:400;color:var(--soft)}
+.title-site{font-family:var(--fr);font-style:italic;font-weight:400;font-size:clamp(48px,12vw,58px);line-height:1.08;letter-spacing:-.01em;margin:28px 0 10px;text-align:left}
+.lead{font-family:var(--fr);font-style:italic;font-size:17px;color:var(--soft);margin:0 0 6px;line-height:1.4}
+.note{font-family:var(--fr);font-style:italic;font-size:18px;line-height:1.5;color:var(--soft);margin:0 0 32px}
+.intro{margin-top:26px}
+.intro .ko{font-size:16.5px;line-height:1.95;margin:0 0 20px}
+.intro .fr-i{font-family:var(--fr);font-style:normal;font-size:15px;line-height:1.65;color:var(--soft);margin:0}
+.intro-about .ko{font-size:16px;line-height:1.85;margin:0 0 16px}
+.intro-about .fr-i{font-size:14px;line-height:1.6}
+.hist{margin-top:32px}
+.hist p{margin:0;color:var(--soft)}
+.hist .h-ko{font-size:14px;line-height:1.8}
+.hist .h-fr{font-family:var(--fr);font-size:12.5px;line-height:1.6}
+
+h2.sec{display:flex;align-items:baseline;gap:10px;margin:32px 0 0;padding-bottom:8px;border-bottom:1px solid var(--accent);font-weight:500;font-size:22px;line-height:1.4}
+h2.sec .fr{font-size:13px}
+h2.sec a{text-decoration:none}
+.item{display:block;text-decoration:none;padding:12px 0;border-bottom:1px solid var(--line)}
+.item .t{display:block;font-size:16px;font-weight:400;line-height:1.5;text-wrap:balance}
+.item .f{display:block;font-family:var(--fr);font-style:italic;font-size:12px;color:var(--soft);line-height:1.3;margin-top:2px}
+.item .d{font-size:11px;color:var(--soft)}
+.item:hover .t{color:var(--accent)}
+.empty{color:var(--soft);font-size:15px;padding:20px 0}
+.more{display:inline-block;margin-top:10px;font-size:13px;color:var(--soft);text-decoration:none;border-bottom:1px solid var(--line)}
+.more:hover{color:var(--ink);border-bottom-color:var(--accent)}
+
+article h1{font-size:clamp(25px,6.5vw,30px);font-weight:500;line-height:1.4;margin:32px 0 6px;text-wrap:balance}
+article .ft{font-family:var(--fr);font-style:italic;font-size:18px;color:var(--soft);line-height:1.3;margin:0 0 10px}
+article .meta{font-size:13px;color:var(--soft);padding-bottom:20px;border-bottom:1px solid var(--accent);margin-bottom:36px}
+article p{margin:0 0 1.6em}
+.back{display:inline-block;margin-top:36px;font-size:15px;color:var(--soft)}
+h2.page{font-size:28px;font-weight:500;margin:48px 0 6px}
+p.soft{color:var(--soft);font-size:15px}
+footer{margin-top:64px;padding-top:16px;border-top:1px solid var(--line);font-size:14px;color:var(--soft);display:flex;gap:18px;flex-wrap:wrap}
+footer a{text-decoration:none;font-family:var(--fr);font-style:italic;font-size:15px}footer a:hover{color:var(--ink);text-decoration:underline;text-decoration-color:var(--accent);text-underline-offset:4px}
+footer .fr{font-size:15px}
+@media (min-width:720px){body{font-size:18px}.wrap{padding-top:32px}.title-site{margin-top:48px}}
+</style>
+</head>
+<body class="home">
+<div class="wrap">
+<a class="brand" href="#home">The Tacit Boundary</a>
+<nav id="nav" aria-label="분류"></nav>
+<main id="main"></main>
+<footer>
+  <a href="#about">À propos</a><a href="#contact">Contact</a>
+  <span class="fr">© The Tacit Boundary</span>
+</footer>
+</div>
+
+<script>
+/* ===== 여기만 고치면 글이 추가돼요 ===== */
+var CATS=[
+  {id:'essais',ko:'에세이',fr:'Essais',more:'전체 글 보기'},
+  {id:'fiction',ko:'소설',fr:'Fiction',more:'모든 소설 보기'},
+  {id:'projets',ko:'프로젝트',fr:'Projets',more:'모든 프로젝트 보기'}
+];
+var POSTS=[
+  {id:'p1',cat:'projets',ko:'평행 에세이',fr:'Essais parallèles',date:'2026',note:'Le décalage d’interprétation — un dessin, deux regards.',
+   body:['여기에 첫 번째 글이 들어갑니다. 글을 보내주시면 이 자리에 그대로 넣어 드려요.','문단은 이렇게 빈 줄로 나뉘어 보입니다. 한국어 단어는 중간에서 끊기지 않고 어절 단위로 줄바꿈됩니다.']},
+  
+];
+/* ===================================== */
+var main=document.getElementById('main'),nav=document.getElementById('nav');
+function cat(id){return CATS.filter(function(c){return c.id===id})[0]}
+function item(p){return '<a class="item" href="#'+p.id+'"><span class="t">'+p.ko+'</span><span class="f">'+(p.fr?p.fr+' · ':'')+'<span class="d">'+p.date+'</span></span></a>'}
+function byCat(id){return POSTS.filter(function(p){return p.cat===id}).sort(function(a,b){return String(b.date).localeCompare(String(a.date))})}
+function list(id){var l=byCat(id);return l.length?l.map(item).join(''):'<div class="empty">아직 올린 글이 없어요.</div>'}
+nav.innerHTML=CATS.map(function(c){return '<a href="#'+c.id+'" data-v="'+c.id+'"><span class="k">'+c.ko+'</span><span class="f">'+c.fr+'</span></a>'}).join('');
+function render(){
+  var h=(location.hash||'#home').slice(1),tab=h,html='',post=POSTS.filter(function(p){return p.id===h})[0];
+  document.body.className=(h==='home'||!h)?'home':'';
+  if(h==='home'){
+    html='<h1 class="title-site">The Tacit<br>Boundary</h1><p class="lead">Écrire depuis l’entre-deux.</p><div class="intro"><p class="ko">파리에서 한국어로 에세이와 소설을 쓴다. 익숙한 것에서 발견되는 낯섦, 경계에 놓인 존재들과 그들을 바라보는 시선에 관심이 있다.</p><p class="fr-i" lang="fr">J’écris à Paris, en coréen, des essais et de la fiction.<br>Je m’intéresse à l’étrangeté que l’on découvre dans le familier, aux êtres qui se tiennent à la lisière, et au regard qu’on porte sur eux.</p></div>';
+  }else if(cat(h)){
+    var c=cat(h);html='<h2 class="sec" style="margin-top:40px"><span>'+c.ko+'</span><span class="fr">'+c.fr+'</span></h2>'+list(h);
+  }else if(post){
+    tab=post.cat;var c2=cat(post.cat);
+    html='<article><h1>'+post.ko+'</h1><p class="ft">'+post.fr+'</p><div class="meta">'+c2.ko+' · '+post.date+'</div>'+(post.note?'<p class="note">'+post.note+'</p>':'')+
+    post.body.map(function(t){return '<p>'+t+'</p>'}).join('')+'<a class="back" href="#'+post.cat+'">← '+c2.ko+' 목록</a></article>';
+  }else if(h==='about'){
+    tab='';html='<h2 class="page" style="font-family:var(--fr);font-style:italic;font-weight:400;margin-bottom:20px">À propos</h2><div class="intro intro-about" style="margin-top:0"><p class="ko">파리에서 한국어로 에세이와 소설을 쓴다. 익숙한 것에서 발견되는 낯섦, 경계에 놓인 존재들과 그들을 바라보는 시선에 관심이 있다.</p><p class="fr-i" lang="fr">J’écris à Paris, en coréen, des essais et de la fiction.<br>Je m’intéresse à l’étrangeté que l’on découvre dans le familier, aux êtres qui se tiennent à la lisière, et au regard qu’on porte sur eux.</p></div><div class="hist"><p class="h-ko">공동 작품집 다수 참여</p><p class="h-fr" lang="fr">Participation à plusieurs ouvrages collectifs.</p></div>';
+  }else if(h==='contact'){
+    tab='';html='<h2 class="page" style="font-family:var(--fr);font-style:italic;font-weight:400;margin-bottom:20px">Contact</h2><p style="font-size:14px;line-height:1.9;margin:0 0 6px">Instagram — <a href="https://www.instagram.com/the.tacit.boundary/" rel="noopener" style="text-decoration:underline;text-decoration-color:var(--accent);text-underline-offset:4px">@the.tacit.boundary</a></p><p style="font-size:14px;line-height:1.9;margin:0">Email — <a href="mailto:jayeejung@gmail.com" style="text-decoration:underline;text-decoration-color:var(--accent);text-underline-offset:4px">jayeejung@gmail.com</a></p>';
+  }else{location.hash='#home';return}
+  main.innerHTML=html;
+  nav.querySelectorAll('a').forEach(function(a){if(a.dataset.v===tab)a.setAttribute('aria-current','page');else a.removeAttribute('aria-current')});
+  window.scrollTo(0,0);
+}
+window.addEventListener('hashchange',render);render();
+</script>
+</body>
+</html>
