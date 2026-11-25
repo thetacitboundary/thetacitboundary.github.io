@@ -1,1 +1,17 @@
-# thetacitboundary.github.io
+# The Tacit Boundary — 작품 관리자
+이 저장소는 GitHub Pages(Jekyll)와 Pages CMS를 이용합니다.
+
+## 최초 연결 (한 번만)
+1. 이 변경사항을 main 브랜치에 합칩니다.
+2. 아이폰에서 https://app.pagescms.org 에 접속하고 GitHub로 로그인합니다.
+3. Pages CMS의 GitHub 앱을 웹사이트 저장소(the tacit boundary.github.io) **하나에만** 설치합니다.
+4. '작품 관리'에서 새 글을 작성하거나 기존 작품을 수정합니다.
+5. '공개하기'가 활성화된 상태에서 저장하면 GitHub Pages 빌드 후 사이트에 표시됩니다.
+
+## 콘텐츠
+- 분류: 에세이 / 소설 / 프로젝트
+- 한국어 제목과 본문, 선택적 프랑스어 제목/번역, 연도, 사진, 영상
+- 영상: 아이폰 파일에서 MP4 등 직접 선택. 용량 큰 동영상은 업로드가 실패할 수 있으므로 5MB 미만 MP4로 먼저 시험해보세요.
+- 현재 GitHub Pages는 대용량 영상 스트리밍용이 아닙니다.
+- 진짜 관리자 로그인 화면은 공개 사이트가 아닌 Pages CMS에 있습니다.
+- 처음 한 번은 작품 발행, 초안 저장, 영상 재생을 직접 시험해야 합니다.
