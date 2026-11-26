@@ -73,6 +73,7 @@ footer{margin-top:64px;padding-top:16px;border-top:1px solid var(--line);font-si
 footer a{text-decoration:none;font-family:var(--fr);font-style:italic;font-size:15px}footer a:hover{color:var(--ink);text-decoration:underline;text-decoration-color:var(--accent);text-underline-offset:4px}
 footer .fr{font-size:15px}
 @media (min-width:720px){body{font-size:18px}.wrap{padding-top:32px}.title-site{margin-top:48px}}
+article .body{font-size:15.5px;line-height:1.9}
 article .body p,article .translation p{margin:0 0 1.6em}
 article .body img,article .translation img{max-width:100%;height:auto}
 article .media{margin:24px auto 36px}
@@ -122,7 +123,7 @@ function render(){
     var media='';
     if(post.cover)media+='<div class="media"><img src="'+esc(post.cover)+'" alt=""></div>';
     if(post.video)media+='<div class="media"><video controls preload="metadata" playsinline src="'+esc(post.video)+'"></video></div>';
-    html='<article><h1>'+esc(post.ko)+'</h1>'+(post.fr?'<p class="ft">'+esc(post.fr)+'</p>':'')+'<div class="meta">'+esc(c2.ko)+' · '+esc(post.date)+'</div>'+(post.note?'<p class="note">'+esc(post.note)+'</p>':'')+media+'<div class="body">'+(post.body||'')+'</div>'+(post.frBody?'<div class="translation"><p lang="fr" class="fr">Version française</p>'+post.frBody+'</div>':'')+'<a class="back" href="#'+post.cat+'">← '+esc(c2.ko)+' 목록</a></article>';
+    html='<article><h1>'+esc(post.ko)+'</h1>'+(post.fr?'<p class="ft">'+esc(post.fr)+'</p>':'')+'<div class="meta">'+esc(c2.ko)+' · '+esc(post.date)+'</div>'+(post.note?'<p class="note">'+esc(post.note)+'</p>':'')+media+'<div class="body">'+(post.body||'')+'</div>'+(post.frBody?'<div class="translation" lang="fr">'+post.frBody+'</div>':'')+'<a class="back" href="#'+post.cat+'">← '+esc(c2.ko)+' 목록</a></article>';
   }else if(h==='about'){
     tab='';html='<h2 class="page" style="font-family:var(--fr);font-style:italic;font-weight:400;margin-bottom:20px">À propos</h2><div class="intro intro-about" style="margin-top:0"><p class="ko">파리에서 한국어로 에세이와 소설을 쓴다. 익숙한 것에서 발견되는 낯섦, 경계에 놓인 존재들과 그들을 바라보는 시선에 관심이 있다.</p><p class="fr-i" lang="fr">J’écris à Paris, en coréen, des essais et de la fiction.<br>Je m’intéresse à l’étrangeté que l’on découvre dans le familier, aux êtres qui se tiennent à la lisière, et au regard qu’on porte sur eux.</p></div><div class="hist"><p class="h-ko">공동 작품집 다수 참여</p><p class="h-fr" lang="fr">Participation à plusieurs ouvrages collectifs.</p></div>';
   }else if(h==='contact'){
