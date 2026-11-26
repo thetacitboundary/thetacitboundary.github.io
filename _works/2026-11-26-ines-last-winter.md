@@ -1,39 +1,63 @@
 ---
-title: "이네스의 마지막 겨울"
-french_title: "Le dernier hiver d’Inès"
+title: "이네스의 죽음과 다니엘 아저씨의 새 강아지"
+french_title: "La mort d’Inès et le nouveau chiot de Daniel"
 category: essais
 year: "2026"
 published: false
 french_body: |-
-  Il arrivait que les jours se succèdent dans le calme, sans le moindre petit incident. Une saison où le temps semblait s'écouler lentement, comme l'air. Une fois la Fashion Week passée, les lumières des rues éteintes et les nuits allongées jusqu'à nos chevilles, l'air de Paris redevenait humide.
+  Il arrivait que les jours se succèdent tranquillement, sans le moindre incident. Une saison où le temps semblait s’écouler aussi lentement que l’air. Une fois la Fashion Week passée, les lumières des rues éteintes, lorsque les nuits s’allongent jusqu’à nous descendre aux chevilles, l’air de Paris redevient moite.
   
-  Sur les berges de la Seine traînaient les restes de l'été. Là où l'on avait dansé ne subsistaient que l'odeur de la sueur refroidie et le vide. L'amour et l'escroquerie, les promesses et les trahisons se mêlaient, tandis que la chaleur d'une saison s'enfonçait dans les pans des nuits qui s'étiraient. En cette période, les visages se creusaient un peu et les expressions se durcissaient.
-  Dans la rue, un chien affamé et un sans-abri transi de froid étaient assis côte à côte. L'écart entre ceux qui avaient un toit et ceux qui n'en avaient pas se creusait peu à peu. La frontière entre la lumière et l'obscurité devenait plus nette, et certaines personnes ne survivaient que dans cet entre-deux. Voilà l'hiver parisien : une saison cruelle, belle et parfaitement indifférente.
+  Sur les quais de Seine traînent encore les vestiges de l’été. Là où l’on dansait, il ne reste qu’une odeur de sueur froide et du vide. Les amours, les arnaques, les promesses et les trahisons se mêlent, et toute la fièvre d’une saison vient se perdre dans les longs pans de la nuit. À cette époque de l’année, les visages se creusent un peu plus, les traits se durcissent.
   
-  Au cœur de cet hiver, Inès, la vieille chienne de la rue du Pont-aux-Choux, entamait sa dernière saison. Les quelques dents qui lui restaient tombaient et ses griffes se détachaient tout entières. Monsieur Daniel lui entourait les pattes de bandages, puis les recouvrait de sacs à déjections canines. Un pansement de fortune, qui me semblait pourtant être sa dernière manière à lui de lui témoigner son amour.
-  Inès gardait dans sa gueule un biscuit qu'elle n'était même plus capable de manger, et continuait à remuer la queue devant les passants. Comme si elle disait : « Je suis encore prête à être aimée. » Face à cet entêtement à vivre, je me disais parfois qu'elle valait mieux que les humains. Et pourtant, je ne comprenais pas. Pourquoi monsieur Daniel laissait-il ainsi à l'abandon une chienne qui lui était si précieuse ? Son pelage était mêlé de pluie et de poussière. Quand l'amour arrive à son terme, il nous arrive de ne plus savoir le prolonger qu'en desserrant notre étreinte. Inès, ainsi laissée à elle-même, resta pourtant auprès de monsieur Daniel jusqu'au bout.
+  Dans la rue, un chien qui a faim et un sans-abri qui a froid sont assis côte à côte. L’écart entre ceux qui ont un toit et ceux qui n’en ont pas se creuse, de quelques centimètres encore. La frontière entre la lumière et l’obscurité se dessine plus nettement, et certains ne survivent que dans cet entre-deux.
   
-  À quinze ans, Inès changeait rapidement. Son poil s'emmêlait et ses yeux avaient perdu toute lueur de vie. Quand je les regardais, je n'y distinguais plus la moindre couleur, la moindre émotion, la moindre trace de vie. Seulement un espace noir et opaque, une obscurité profonde qui ne contenait plus rien. C'est dans cette obscurité que j'ai commencé à entrevoir ce qu'était la « mort ». Peut-être la mort n'est-elle pas simplement la disparition de la vie, mais un lent retrait de la lumière.
+  C’est cela, l’hiver à Paris. Une saison cruelle, belle et parfaitement indifférente.
   
-  Des années auparavant, lorsque le chien de mes parents était mort, j'avais pleuré pendant plusieurs jours. J'avais pleuré jusqu'à avoir les yeux gonflés, puis pleuré encore. Je repensais à tout ce que je n'avais pas fait pour lui, à tout ce que je ne pourrais plus jamais faire. Mais avec le recul, je crois que ce chagrin n'était pas pour lui : il était pour moi. Le chien ne souffrait plus, et ces heures passées à pleurer n'étaient finalement que mon propre deuil. Quelques années après sa mort, sa présence si chère demeurait en moi comme une masse immense. Mais beaucoup de souvenirs de notre vie ensemble, rangés dans une boîte de cellophane aux couleurs vives, perdaient peu à peu leur transparence. Le temps avait ce pouvoir immense de diluer les événements.
+  Au cœur de cet hiver, Inès, la vieille chienne de la rue du Pont-aux-Choux, entamait sa dernière saison. Les quelques dents qui lui restaient tombaient, ses griffes se détachaient tout entières. Daniel lui avait bandé les pattes avant de les recouvrir de sacs à crottes. Des premiers soins bien maladroits, mais qui semblaient être la dernière forme que prenait son amour pour elle.
   
-  Inès est morte cet hiver-là. Cette petite chienne noire, toujours un peu semblable à un chiffon usé, avait disparu. Et le jour même, monsieur Daniel est arrivé avec un nouveau chiot. Quelques heures à peine après avoir appris la mort d'Inès. J'en suis restée sans voix.
+  Inès tenait entre ses mâchoires un biscuit qu’elle n’était même plus capable de manger et continuait à remuer la queue devant les gens. Comme si elle leur disait : « Je suis encore prête à être aimée. » Devant cet acharnement à vivre, je me disais parfois qu’elle valait mieux que nous, les humains.
   
-  « Sans chien, je ne peux pas vivre. »
+  Pourtant, quelque chose m’échappait. Pourquoi Daniel laissait-il ainsi dépérir cette chienne à laquelle il tenait tant ? Son pelage où se mêlaient l’eau de pluie et la poussière. Quand l’amour touche à sa fin, il arrive que la seule façon de le prolonger soit d’ouvrir la main. Inès, que cette main ne retenait plus, est restée jusqu’au bout auprès de Daniel.
   
-  Il l'a dit calmement.
+  À quinze ans, Inès changeait à vue d’œil. Son poil s’emmêlait et ses yeux avaient perdu toute leur vivacité. Lorsqu’on plongeait son regard dans le sien, on n’y trouvait plus la moindre couleur, la moindre émotion, la moindre trace de vie. Rien qu’un espace noir et opaque, une obscurité profonde qui ne contenait plus rien.
   
-  « Si je n'ai pas de chien, je ne sors pas. Je ne parle à personne. »
+  C’est dans cette obscurité que, pour la première fois, j’ai commencé à entrevoir ce qu’était la mort. Peut-être que la mort n’est pas simplement la disparition de la vie, mais ce lent retrait de la lumière.
   
-  J'ai vu sur son visage une solitude absolue.
+  Il y a longtemps, lorsque le chien de mes parents est mort, j’ai pleuré pendant des jours. J’ai pleuré encore et encore, jusqu’à en avoir les yeux gonflés. Je repensais à toutes les fois où je n’avais pas assez bien pris soin de lui, et tout ce que je ne pourrais plus jamais faire pour lui me rongeait.
   
-  Après cela, monsieur Daniel s'est mis à m'éviter. Quand nous nous croisions, il détournait les yeux et ne me faisait plus la bise. Je le regardais de loin marcher avec son nouveau chien dans les bras. Comme s'il ne s'était rien passé, les petites pattes du chiot s'agitaient vivement auprès de son ombre.
+  Mais avec le recul, je comprends que ce n’était pas pour lui que je pleurais. C’était pour moi. Lui était déjà délivré de sa souffrance, et tout ce temps passé à pleurer n’était, au fond, que le temps où je pleurais ma propre perte.
   
-  J'ai mis du temps à comprendre qu'il existe plusieurs façons d'aimer. Moi qui supporte bien la solitude et aime être seule, je n'avais jamais vraiment essayé de regarder au fond du cœur de ceux pour qui la solitude et l'isolement sont insupportables. Il m'a aussi fallu du temps pour comprendre à quel point monsieur Daniel était désespéré lorsqu'il disait qu'il ne pouvait pas vivre sans chien.
-  Même lorsqu'elle sentait mauvais et que son pelage était en désordre, Inès ne s'était jamais séparée de lui un seul instant. Pour ces êtres vivants que nous avons choisi d'accueillir selon notre bon vouloir, le mieux que nous puissions faire n'est-il pas de rester auprès d'eux ? Que ce soit pour lui-même ou non, Inès avait sans doute été une chienne heureuse. Inès, la vieille habituée de la rue du Pont-aux-Choux, nous avait ainsi quittés.
-  Les jours ternes et humides continuaient de se succéder.
+  Quelques années après sa mort, ce chien qui m’était si cher demeurait en moi comme une seule et vaste présence. Mais les nombreux souvenirs de notre vie ensemble, entassés dans une boîte de cellophane multicolore, perdaient peu à peu leur transparence. Le temps avait cet immense pouvoir de diluer les événements.
   
-  C'était l'hiver.
+  Inès est morte cet hiver-là. Cette petite chienne noire, qui avait toujours eu l’air d’une vieille guenille, a ainsi disparu.
+  
+  Et ce jour-là, Daniel a ramené un nouveau chiot. Quelques heures à peine après avoir appris la mort d’Inès.
+  
+  J’en suis restée sans voix.
+  
+  « Je ne peux pas vivre sans chien. »
+  
+  Il me l’a dit calmement.
+  
+  « Sans chien, je ne sors pas de chez moi. Je ne parle plus à personne. »
+  
+  J’ai vu sur son visage une solitude absolue.
+  
+  À partir de ce jour, Daniel m’a évitée. Même lorsque nous nous croisions dans la rue, il détournait le regard. Il ne me faisait plus la bise non plus. De loin, je le regardais marcher, son nouveau chien dans les bras. Comme si rien ne s’était passé. À côté de son ombre, les adorables petites pattes du nouveau chien s’agitaient.
+  
+  J’ai lentement compris que l’amour pouvait prendre bien des formes. Moi qui me sens rarement seule et qui goûte même la solitude, je n’avais jamais vraiment cherché à comprendre ceux pour qui elle est, au contraire, si difficile à supporter.
+  
+  Il m’a fallu du temps, aussi, pour comprendre toute la détresse que renfermaient les mots de Daniel lorsqu’il me disait qu’il ne pourrait pas vivre sans chien.
+  
+  Inès avait beau sentir mauvais et avoir le poil en piteux état, elle n’avait jamais quitté Daniel, pas même un instant. La meilleure chose que nous puissions offrir à ces êtres dont nous avons choisi la vie à leur place, n’est-ce pas, après tout, d’être auprès d’eux ?
+  
+  Que Daniel l’ait fait ou non pour lui-même, Inès avait sans doute été une chienne heureuse.
+  
+  C’est ainsi qu’Inès, doyenne de la rue du Pont-aux-Choux, nous a quittés.
+  
+  Les jours mornes et humides se succédaient.
+  
+  C’était l’hiver.
 ---
 어떤 때에는 자잘한 사건사고 하나 없이 조용한 날들이 이어지기도 했다. 마치 시간이 공기처럼 느리게 흘러가는 계절. 패션위크가 지나고, 거리의 조명이 꺼지고, 밤의 길이가 발목까지 늘어날 때쯤이면 파리의 공기는 다시 눅눅해진다.
 
