@@ -41,6 +41,13 @@ content:
               label: 소설
             - name: projets
               label: 프로젝트
+      - name: series
+        label: 연작 / 책 묶음 (선택)
+        type: select
+        options:
+          values:
+            - name: pont-aux-choux
+              label: 퐁토슈 가의 사람들
       - name: year
         label: 연도
         type: string
