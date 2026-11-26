@@ -73,8 +73,10 @@ footer{margin-top:64px;padding-top:16px;border-top:1px solid var(--line);font-si
 footer a{text-decoration:none;font-family:var(--fr);font-style:italic;font-size:15px}footer a:hover{color:var(--ink);text-decoration:underline;text-decoration-color:var(--accent);text-underline-offset:4px}
 footer .fr{font-size:15px}
 @media (min-width:720px){body{font-size:18px}.wrap{padding-top:32px}.title-site{margin-top:48px}}
-article .body{font-size:15.5px;line-height:1.9}
-article .body p,article .translation p{margin:0 0 1.6em}
+article .body{font-size:15.5px;line-height:1.9;word-break:normal;overflow-wrap:break-word}
+article .body p{margin:0 0 1em}
+article .body p:empty{display:none}
+article .translation p{margin:0 0 1.6em}
 article .body img,article .translation img{max-width:100%;height:auto}
 article .media{margin:24px auto 36px}
 article .media video{width:100%;height:auto;max-height:75vh;max-width:360px;display:block;margin:auto;background:#161616}
