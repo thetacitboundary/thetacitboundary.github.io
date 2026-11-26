@@ -128,7 +128,7 @@ function byCat(id){return POSTS.filter(function(p){return p.cat===id}).sort(func
 function list(id){
   if(id!=='essais'){var l=byCat(id);return l.length?l.map(item).join(''):'<div class="empty">아직 올린 글이 없어요.</div>'}
   var groups=SERIES.filter(function(s){return bySeries(s.id).length>0});
-  var grouped=groups.map(function(s){return '<a class="series-link" href="#'+s.hash+'"><span class="t">'+esc(s.ko)+'</span><span class="f">'+esc(s.fr)+'</span><span class="hint">연작 · 글 목록 보기</span></a>'}).join('');
+  var grouped=groups.map(function(s){return '<a class="series-link" href="#'+s.hash+'"><span class="t">'+esc(s.ko)+'</span><span class="f">'+esc(s.fr)+'</span></a>'}).join('');
   var standalones=byCat(id).filter(function(p){return !p.series});
   return grouped+standalones.map(item).join('')||(groups.length?'':'<div class="empty">아직 올린 글이 없어요.</div>');
 }
@@ -143,7 +143,7 @@ function render(){
   }else if(seriesByHash(h)){
     tab='essais';
     var s=seriesByHash(h),works=bySeries(s.id);
-    html='<a class="series-crumb" href="#essais">← 에세이 / Essais</a><h2 class="page" style="margin-top:26px">'+esc(s.ko)+'</h2><p class="ft" style="font-family:var(--fr);font-style:italic;color:var(--soft);font-size:17px;margin:0 0 26px">'+esc(s.fr)+'</p>'+works.map(function(p,i){return '<div class="series-entry"><div class="label">'+(p.id===s.intro?'글':'챕터')+'</div>'+item(p)+'</div>'}).join('');
+    html='<a class="series-crumb" href="#essais">← 에세이 / Essais</a><h2 class="page" style="margin-top:26px">'+esc(s.ko)+'</h2><p class="ft" style="font-family:var(--fr);font-style:italic;color:var(--soft);font-size:17px;margin:0 0 26px">'+esc(s.fr)+'</p>'+works.map(function(p,i){return '<div class="series-entry">'+item(p)+'</div>'}).join('');
   }else if(post){
     tab=post.cat;var c2=cat(post.cat);
     var media='';
