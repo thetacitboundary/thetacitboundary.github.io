@@ -58,6 +58,16 @@ h2.sec a{text-decoration:none}
 .item .f{display:block;font-family:var(--fr);font-style:italic;font-size:12px;color:var(--soft);line-height:1.3;margin-top:2px}
 .item .d{font-size:11px;color:var(--soft)}
 .item:hover .t{color:var(--accent)}
+.series-link{display:block;text-decoration:none;padding:16px 0;border-bottom:1px solid var(--line)}
+.series-link .t{display:block;font-size:17px;line-height:1.6}
+.series-link .f{display:block;font:italic 13px/1.5 var(--fr);color:var(--soft)}
+.series-link .hint{display:block;margin-top:5px;font-size:12px;color:var(--soft)}
+.series-link:hover .t{color:var(--accent)}
+.series-entry{margin-top:22px}
+.series-entry .label{font-size:12px;color:var(--soft);margin-bottom:2px}
+.series-intro{font-size:14px;color:var(--soft);line-height:1.8;margin:12px 0 26px}
+.series-crumb{display:inline-block;margin-top:24px;color:var(--soft);font-size:13px;text-decoration:none}
+.series-crumb:hover{text-decoration:underline}
 .empty{color:var(--soft);font-size:15px;padding:20px 0}
 .more{display:inline-block;margin-top:10px;font-size:13px;color:var(--soft);text-decoration:none;border-bottom:1px solid var(--line)}
 .more:hover{color:var(--ink);border-bottom-color:var(--accent)}
@@ -101,17 +111,27 @@ var CATS=[{id:'essais',ko:'에세이',fr:'Essais'},{id:'fiction',ko:'소설',fr:
 var POSTS=[
 {% for work in site.works %}
 {% unless work.published == false %}
-{id:{{ work.slug | jsonify }},cat:{{ work.category | jsonify }},ko:{{ work.title | jsonify }},fr:{{ work.french_title | default: '' | jsonify }},date:{{ work.year | default: '' | jsonify }},note:{{ work.note | default: '' | jsonify }},video:{{ work.video | default: '' | jsonify }},cover:{{ work.cover | default: '' | jsonify }},body:{{ work.content | markdownify | jsonify }},frBody:{{ work.french_body | default: '' | markdownify | jsonify }}},
+{id:{{ work.slug | jsonify }},cat:{{ work.category | jsonify }},ko:{{ work.title | jsonify }},fr:{{ work.french_title | default: '' | jsonify }},date:{{ work.year | default: '' | jsonify }},note:{{ work.note | default: '' | jsonify }},video:{{ work.video | default: '' | jsonify }},cover:{{ work.cover | default: '' | jsonify }},series:{{ work.series | default: '' | jsonify }},body:{{ work.content | markdownify | jsonify }},frBody:{{ work.french_body | default: '' | markdownify | jsonify }}},
 {% endunless %}
 {% endfor %}
 ];
 function esc(s){return String(s||'').replace(/[&<>"']/g,function(c){return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]})}
 
+var SERIES=[{id:'pont-aux-choux',ko:'퐁토슈 가의 사람들',fr:'Les gens de la rue du Pont-aux-Choux',intro:'2026-11-26-pont-aux-choux',hash:'series-pont-aux-choux'}];
 var main=document.getElementById('main'),nav=document.getElementById('nav');
+function seriesByHash(h){return SERIES.filter(function(s){return s.hash===h})[0]}
+function seriesById(id){return SERIES.filter(function(s){return s.id===id})[0]}
+function bySeries(id){return POSTS.filter(function(p){return p.series===id}).sort(function(a,b){return a.id===seriesById(id).intro?-1:b.id===seriesById(id).intro?1:String(a.id).localeCompare(String(b.id))})}
 function cat(id){return CATS.filter(function(c){return c.id===id})[0]}
 function item(p){return '<a class="item" href="#'+encodeURIComponent(p.id)+'"><span class="t">'+esc(p.ko)+'</span><span class="f">'+(p.fr?esc(p.fr)+' · ':'')+'<span class="d">'+esc(p.date)+'</span></span></a>'}
 function byCat(id){return POSTS.filter(function(p){return p.cat===id}).sort(function(a,b){return String(b.date).localeCompare(String(a.date))})}
-function list(id){var l=byCat(id);return l.length?l.map(item).join(''):'<div class="empty">아직 올린 글이 없어요.</div>'}
+function list(id){
+  if(id!=='essais'){var l=byCat(id);return l.length?l.map(item).join(''):'<div class="empty">아직 올린 글이 없어요.</div>'}
+  var groups=SERIES.filter(function(s){return bySeries(s.id).length>0});
+  var grouped=groups.map(function(s){return '<a class="series-link" href="#'+s.hash+'"><span class="t">'+esc(s.ko)+'</span><span class="f">'+esc(s.fr)+'</span><span class="hint">연작 · 글 목록 보기</span></a>'}).join('');
+  var standalones=byCat(id).filter(function(p){return !p.series});
+  return grouped+standalones.map(item).join('')||(groups.length?'':'<div class="empty">아직 올린 글이 없어요.</div>');
+}
 nav.innerHTML=CATS.map(function(c){return '<a href="#'+c.id+'" data-v="'+c.id+'"><span class="k">'+c.ko+'</span><span class="f">'+c.fr+'</span></a>'}).join('');
 function render(){
   var h=(location.hash||'#home').slice(1),tab=h,html='',post=POSTS.filter(function(p){return p.id===h})[0];
@@ -120,12 +140,16 @@ function render(){
     html='<h1 class="title-site">The Tacit<br>Boundary</h1><p class="lead">Écrire depuis l’entre-deux.</p><div class="intro"><p class="ko">파리에서 한국어로 에세이와 소설을 쓴다. 익숙한 것에서 발견되는 낯섦, 경계에 놓인 존재들과 그들을 바라보는 시선에 관심이 있다.</p><p class="fr-i" lang="fr">J’écris à Paris, en coréen, des essais et de la fiction.<br>Je m’intéresse à l’étrangeté que l’on découvre dans le familier, aux êtres qui se tiennent à la lisière, et au regard qu’on porte sur eux.</p></div>';
   }else if(cat(h)){
     var c=cat(h);html='<h2 class="sec" style="margin-top:40px"><span>'+c.ko+'</span><span class="fr">'+c.fr+'</span></h2>'+list(h);
+  }else if(seriesByHash(h)){
+    tab='essais';
+    var s=seriesByHash(h),works=bySeries(s.id);
+    html='<a class="series-crumb" href="#essais">← 에세이 / Essais</a><h2 class="page" style="margin-top:26px">'+esc(s.ko)+'</h2><p class="ft" style="font-family:var(--fr);font-style:italic;color:var(--soft);font-size:17px;margin:0 0 26px">'+esc(s.fr)+'</p>'+works.map(function(p,i){return '<div class="series-entry"><div class="label">'+(p.id===s.intro?'글':'챕터')+'</div>'+item(p)+'</div>'}).join('');
   }else if(post){
     tab=post.cat;var c2=cat(post.cat);
     var media='';
     if(post.cover)media+='<div class="media"><img src="'+esc(post.cover)+'" alt=""></div>';
     if(post.video)media+='<div class="media"><video controls preload="metadata" playsinline src="'+esc(post.video)+'"></video></div>';
-    html='<article><h1>'+esc(post.ko)+'</h1>'+(post.fr?'<p class="ft">'+esc(post.fr)+'</p>':'')+'<div class="meta">'+esc(c2.ko)+' · '+esc(post.date)+'</div>'+(post.note?'<p class="note">'+esc(post.note)+'</p>':'')+media+'<div class="body">'+(post.body||'')+'</div>'+(post.frBody?'<div class="translation" lang="fr">'+post.frBody+'</div>':'')+'<a class="back" href="#'+post.cat+'">← '+esc(c2.ko)+' 목록</a></article>';
+    html='<article><h1>'+esc(post.ko)+'</h1>'+(post.fr?'<p class="ft">'+esc(post.fr)+'</p>':'')+'<div class="meta">'+esc(c2.ko)+' · '+esc(post.date)+'</div>'+(post.note?'<p class="note">'+esc(post.note)+'</p>':'')+media+'<div class="body">'+(post.body||'')+'</div>'+(post.frBody?'<div class="translation" lang="fr">'+post.frBody+'</div>':'')+'<a class="back" href="#'+(post.series&&seriesById(post.series)?seriesById(post.series).hash:post.cat)+'">← '+esc(post.series&&seriesById(post.series)?seriesById(post.series).ko:c2.ko)+' 목록</a></article>';
   }else if(h==='about'){
     tab='';html='<h2 class="page" style="font-family:var(--fr);font-style:italic;font-weight:400;margin-bottom:20px">À propos</h2><div class="intro intro-about" style="margin-top:0"><p class="ko">파리에서 한국어로 에세이와 소설을 쓴다. 익숙한 것에서 발견되는 낯섦, 경계에 놓인 존재들과 그들을 바라보는 시선에 관심이 있다.</p><p class="fr-i" lang="fr">J’écris à Paris, en coréen, des essais et de la fiction.<br>Je m’intéresse à l’étrangeté que l’on découvre dans le familier, aux êtres qui se tiennent à la lisière, et au regard qu’on porte sur eux.</p></div><div class="hist"><p class="h-ko">공동 작품집 다수 참여</p><p class="h-fr" lang="fr">Participation à plusieurs ouvrages collectifs.</p></div>';
   }else if(h==='contact'){
