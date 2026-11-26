@@ -121,7 +121,8 @@ var SERIES=[{id:'pont-aux-choux',ko:'퐁토슈 가의 사람들',fr:'Les gens de
 var main=document.getElementById('main'),nav=document.getElementById('nav');
 function seriesByHash(h){return SERIES.filter(function(s){return s.hash===h})[0]}
 function seriesById(id){return SERIES.filter(function(s){return s.id===id})[0]}
-function bySeries(id){return POSTS.filter(function(p){return p.series===id}).sort(function(a,b){return a.id===seriesById(id).intro?-1:b.id===seriesById(id).intro?1:String(a.id).localeCompare(String(b.id))})}
+function seriesOf(p){return p.series||(p.id==='2026-11-26-ines-last-winter'?'pont-aux-choux':'')}
+function bySeries(id){return POSTS.filter(function(p){return seriesOf(p)===id}).sort(function(a,b){return a.id===seriesById(id).intro?-1:b.id===seriesById(id).intro?1:String(a.id).localeCompare(String(b.id))})}
 function cat(id){return CATS.filter(function(c){return c.id===id})[0]}
 function item(p){return '<a class="item" href="#'+encodeURIComponent(p.id)+'"><span class="t">'+esc(p.ko)+'</span><span class="f">'+(p.fr?esc(p.fr)+' · ':'')+'<span class="d">'+esc(p.date)+'</span></span></a>'}
 function byCat(id){return POSTS.filter(function(p){return p.cat===id}).sort(function(a,b){return String(b.date).localeCompare(String(a.date))})}
@@ -129,7 +130,7 @@ function list(id){
   if(id!=='essais'){var l=byCat(id);return l.length?l.map(item).join(''):'<div class="empty">아직 올린 글이 없어요.</div>'}
   var groups=SERIES.filter(function(s){return bySeries(s.id).length>0});
   var grouped=groups.map(function(s){return '<a class="series-link" href="#'+s.hash+'"><span class="t">'+esc(s.ko)+'</span><span class="f">'+esc(s.fr)+'</span></a>'}).join('');
-  var standalones=byCat(id).filter(function(p){return !p.series});
+  var standalones=byCat(id).filter(function(p){return !seriesOf(p)});
   return grouped+standalones.map(item).join('')||(groups.length?'':'<div class="empty">아직 올린 글이 없어요.</div>');
 }
 nav.innerHTML=CATS.map(function(c){return '<a href="#'+c.id+'" data-v="'+c.id+'"><span class="k">'+c.ko+'</span><span class="f">'+c.fr+'</span></a>'}).join('');
@@ -149,7 +150,7 @@ function render(){
     var media='';
     if(post.cover)media+='<div class="media"><img src="'+esc(post.cover)+'" alt=""></div>';
     if(post.video)media+='<div class="media"><video controls preload="metadata" playsinline src="'+esc(post.video)+'"></video></div>';
-    html='<article><h1>'+esc(post.ko)+'</h1>'+(post.fr?'<p class="ft">'+esc(post.fr)+'</p>':'')+'<div class="meta">'+esc(c2.ko)+' · '+esc(post.date)+'</div>'+(post.note?'<p class="note">'+esc(post.note)+'</p>':'')+media+'<div class="body">'+(post.body||'')+'</div>'+(post.frBody?'<div class="translation" lang="fr">'+post.frBody+'</div>':'')+'<a class="back" href="#'+(post.series&&seriesById(post.series)?seriesById(post.series).hash:post.cat)+'">← '+esc(post.series&&seriesById(post.series)?seriesById(post.series).ko:c2.ko)+' 목록</a></article>';
+    html='<article><h1>'+esc(post.ko)+'</h1>'+(post.fr?'<p class="ft">'+esc(post.fr)+'</p>':'')+'<div class="meta">'+esc(c2.ko)+' · '+esc(post.date)+'</div>'+(post.note?'<p class="note">'+esc(post.note)+'</p>':'')+media+'<div class="body">'+(post.body||'')+'</div>'+(post.frBody?'<div class="translation" lang="fr">'+post.frBody+'</div>':'')+'<a class="back" href="#'+(seriesOf(post)&&seriesById(seriesOf(post))?seriesById(seriesOf(post)).hash:post.cat)+'">← '+esc(seriesOf(post)&&seriesById(seriesOf(post))?seriesById(seriesOf(post)).ko:c2.ko)+' 목록</a></article>';
   }else if(h==='about'){
     tab='';html='<h2 class="page" style="font-family:var(--fr);font-style:italic;font-weight:400;margin-bottom:20px">À propos</h2><div class="intro intro-about" style="margin-top:0"><p class="ko">파리에서 한국어로 에세이와 소설을 쓴다. 익숙한 것에서 발견되는 낯섦, 경계에 놓인 존재들과 그들을 바라보는 시선에 관심이 있다.</p><p class="fr-i" lang="fr">J’écris à Paris, en coréen, des essais et de la fiction.<br>Je m’intéresse à l’étrangeté que l’on découvre dans le familier, aux êtres qui se tiennent à la lisière, et au regard qu’on porte sur eux.</p></div><div class="hist"><p class="h-ko">공동 작품집 다수 참여</p><p class="h-fr" lang="fr">Participation à plusieurs ouvrages collectifs.</p></div>';
   }else if(h==='contact'){
