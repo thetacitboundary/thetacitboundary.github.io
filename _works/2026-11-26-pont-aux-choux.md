@@ -1,41 +1,129 @@
 ---
-title: "퐁토슈 가의 사람들"
-french_title: "Les gens de la rue du Pont-aux-Choux"
+title: 퐁토슈 가의 사람들
+french_title: Les gens de la rue du Pont-aux-Choux
 category: essais
 year: "2026"
-published: false
-french_body: |-
-  Il y a environ quatre cents ans, au XVIIᵉ siècle, la rue du Pont-aux-Choux n’était qu’un champ de choux. Le « chou » de Pont-aux-Choux, c’est bien le légume. Paris était alors beaucoup plus petit qu’aujourd’hui : à l’emplacement du grand boulevard qui mène à la rue se trouvait à l’époque une enceinte fortifiée. Autant dire que la rue se trouvait presque aux confins de la ville.
-  
-  À partir du XVIIIᵉ siècle, les immeubles sortent de terre, les commerces s’installent, et la rue commence à changer. Sur les photographies du XIXᵉ siècle, on retrouve certaines boutiques d’alors, toujours là aujourd’hui. Au fil des siècles, les propriétaires ont changé, ainsi que mille petits détails, mais les enseignes des cafés, des bureaux de tabac et des cordonneries sont restées à leur place, presque identiques, à quelques nuances de couleur près.
-  
-  Quand je pense à la Corée, où tout change si vite qu’on a du mal à trouver ce qui reste, la France me paraît d’une lenteur incroyable. Des bâtiments vieux de plusieurs siècles se dressent au même endroit, comme des fossiles. C’est peut-être cela, le charme de Paris : ce sentiment rassurant, ou familier, que dans dix ou vingt ans, ce que je connais sera encore là. Et les histoires de ceux qui ont vécu entre ces murs demeurent passionnantes, même des siècles plus tard. Car les manières de vivre ont beau changer, l’essence de la vie traverse les époques.
-  
-  À l’entrée de la rue, en venant du boulevard, il y a sur la gauche, à l’angle, un café tenu par une famille arabe. Au XIXᵉ siècle, c’était déjà un bar-tabac, à la fois café et bureau de tabac. Mais entre ce café-là et celui d’aujourd’hui, il y a tout de même un monde.
-  
-  Il est tenu par une patronne très âgée et par ses deux enfants, déjà adultes, un fils et une fille. Et ces trois-là se disputent à longueur de journée, à s’en casser la voix. Je passais devant ce café matin et soir sur le chemin du travail : que je le veuille ou non, je les voyais, et que je le veuille ou non, j’entendais leurs hurlements. Je ne saurais dire depuis quand, mais j’ai fini par observer la vieille patronne.
-  
-  À la voir, on avait du mal à croire qu’elle possédait un café. On n’aurait même pas été surpris d’apprendre qu’elle vivait dans la rue. C’est dans cette tenue qu’elle fouillait les poubelles de la rue du Pont-aux-Choux. Au début, j’ai cru que c’était une dame qui, contrairement aux autres Français, prenait le tri sélectif très au sérieux. Mais non : elle fouillait bel et bien les ordures.
-  
-  Un jour, je l’ai aussi vue accroupie au bord du trottoir, en train de laver des fourchettes et de rincer une serpillière dans l’eau qui coulait dans le caniveau. Il faut préciser qu’à Paris, chaque matin, on ouvre des bouches de lavage pour nettoyer les rues à grande eau. Le courant emporte les petits déchets et la poussière. Cette eau vient de la Seine. Et c’était précisément dans cette eau-là qu’elle lavait les fourchettes de ses clients.
-  
-  Aucun commerçant de la rue ne mettait les pieds dans ce café. Personne ne saluait la patronne. Avec son visage de vieux tronc noueux, qui semblait n’avoir jamais souri, ses hardes et son fichu noué sur la tête, il n’était pas facile de lui dire bonjour.
-  
-  Alors, comment ce café tenait-il ? Eh bien, seuls les touristes, qui ignoraient tout de cette histoire, s’installaient joyeusement en terrasse pour boire leur café. Chaque fois que j’y voyais des touristes coréens, les mots me brûlaient les lèvres. J’avais une envie folle de leur indiquer les vraies bonnes adresses du quartier, celles où l’on boit un excellent café et où l’on mange de délicieuses pâtisseries. Mais je ne me suis jamais mêlée de ce qui ne me regardait pas. Les pauvres.
-  
-  En face de la boutique, au deuxième étage, vit un monsieur seul. Il a passé toute sa vie rue du Pont-aux-Choux. Son passe-temps est de regarder la rue depuis son étage, et, sauf les jours de froid, il est très souvent torse nu. Il reste là de longs moments, le visage impassible, à contempler la rue, et il arrive souvent que nos regards se croisent. De la boutique, on voit si bien chez lui que lever les yeux vers son deuxième étage est devenu une habitude. Serait-il torse nu aujourd’hui ? Il m’est même arrivé de lire la météo dans son degré de déshabillage.
-  
-  Si j’ai commencé à saluer cet homme un peu étrange, c’est uniquement par déformation professionnelle. Un jour, en marchant dans la rue, je me suis retrouvée nez à nez avec lui. Sans y penser, un sourire sans âme et un « Bonjour ! » m’ont échappé. Il m’a répondu par un large sourire. Depuis, nous sommes devenus de vrais voisins, de ceux qui se disent bonjour en se croisant. Chaque jour, il continue d’observer la rue depuis son deuxième étage. Je n’ai aucune idée de ce qui peut bien se passer derrière ce visage impassible, mais je sais maintenant que cet homme sait sourire.
-  
-  C’est au fil des rencontres avec les gens qui passent par la rue du Pont-aux-Choux que j’ai compris qu’il existe des milliers de visages différents, autant de visions du monde, et tant de personnes qui vivent selon leurs propres convictions. Ceux que j’ai rencontrés ici vivaient de façon si singulière qu’ils ont réduit en miettes les murs du monde auquel j’appartenais jusque-là. Comme les ingrédients d’un même saladier, ils se mêlent tout en gardant chacun leur espace, sans jugement hâtif ni critères imposés aux autres, chacun à l’aise avec son propre visage.
-  
-  C’est l’histoire des gens de la rue du Pont-aux-Choux, mais c’est aussi un énième chapitre de mon apprentissage de la vie.
-  
-  Je me fais beaucoup moins souvent voler. Les vieilles dames ne m’adressent plus la parole dans la rue. J’ai appris à marcher sans dévisager personne, à détourner les yeux devant les sans-abri qui mendient et les pigeons à qui il manque une patte. Je sais maintenant que les plaies de Paris ont chacune leur histoire. Le temps où je m’abîmais à réagir à chaque souffrance sous mes yeux est révolu.
-  
-  Dans un avenir très lointain, que restera-t-il de moi dans la rue du Pont-aux-Choux ?
-  
-  En attendant les histoires qui s’écriront un jour, les gens de la rue du Pont-aux-Choux s’affairent à vivre, aujourd’hui.
+cover: /media/images/img8503.jpeg
+published: true
+french_body: >-
+  Il y a environ quatre cents ans, au XVIIᵉ siècle, la rue du Pont-aux-Choux
+  n’était qu’un champ de choux. Le « chou » de Pont-aux-Choux, c’est bien le
+  légume. Paris était alors beaucoup plus petit qu’aujourd’hui : à l’emplacement
+  du grand boulevard qui mène à la rue se trouvait à l’époque une enceinte
+  fortifiée. Autant dire que la rue se trouvait presque aux confins de la ville.
+
+
+  À partir du XVIIIᵉ siècle, les immeubles sortent de terre, les commerces
+  s’installent, et la rue commence à changer. Sur les photographies du XIXᵉ
+  siècle, on retrouve certaines boutiques d’alors, toujours là aujourd’hui. Au
+  fil des siècles, les propriétaires ont changé, ainsi que mille petits détails,
+  mais les enseignes des cafés, des bureaux de tabac et des cordonneries sont
+  restées à leur place, presque identiques, à quelques nuances de couleur près.
+
+
+  Quand je pense à la Corée, où tout change si vite qu’on a du mal à trouver ce
+  qui reste, la France me paraît d’une lenteur incroyable. Des bâtiments vieux
+  de plusieurs siècles se dressent au même endroit, comme des fossiles. C’est
+  peut-être cela, le charme de Paris : ce sentiment rassurant, ou familier, que
+  dans dix ou vingt ans, ce que je connais sera encore là. Et les histoires de
+  ceux qui ont vécu entre ces murs demeurent passionnantes, même des siècles
+  plus tard. Car les manières de vivre ont beau changer, l’essence de la vie
+  traverse les époques.
+
+
+  À l’entrée de la rue, en venant du boulevard, il y a sur la gauche, à l’angle,
+  un café tenu par une famille arabe. Au XIXᵉ siècle, c’était déjà un bar-tabac,
+  à la fois café et bureau de tabac. Mais entre ce café-là et celui
+  d’aujourd’hui, il y a tout de même un monde.
+
+
+  Il est tenu par une patronne très âgée et par ses deux enfants, déjà adultes,
+  un fils et une fille. Et ces trois-là se disputent à longueur de journée, à
+  s’en casser la voix. Je passais devant ce café matin et soir sur le chemin du
+  travail : que je le veuille ou non, je les voyais, et que je le veuille ou
+  non, j’entendais leurs hurlements. Je ne saurais dire depuis quand, mais j’ai
+  fini par observer la vieille patronne.
+
+
+  À la voir, on avait du mal à croire qu’elle possédait un café. On n’aurait
+  même pas été surpris d’apprendre qu’elle vivait dans la rue. C’est dans cette
+  tenue qu’elle fouillait les poubelles de la rue du Pont-aux-Choux. Au début,
+  j’ai cru que c’était une dame qui, contrairement aux autres Français, prenait
+  le tri sélectif très au sérieux. Mais non : elle fouillait bel et bien les
+  ordures.
+
+
+  Un jour, je l’ai aussi vue accroupie au bord du trottoir, en train de laver
+  des fourchettes et de rincer une serpillière dans l’eau qui coulait dans le
+  caniveau. Il faut préciser qu’à Paris, chaque matin, on ouvre des bouches de
+  lavage pour nettoyer les rues à grande eau. Le courant emporte les petits
+  déchets et la poussière. Cette eau vient de la Seine. Et c’était précisément
+  dans cette eau-là qu’elle lavait les fourchettes de ses clients.
+
+
+  Aucun commerçant de la rue ne mettait les pieds dans ce café. Personne ne
+  saluait la patronne. Avec son visage de vieux tronc noueux, qui semblait
+  n’avoir jamais souri, ses hardes et son fichu noué sur la tête, il n’était pas
+  facile de lui dire bonjour.
+
+
+  Alors, comment ce café tenait-il ? Eh bien, seuls les touristes, qui
+  ignoraient tout de cette histoire, s’installaient joyeusement en terrasse pour
+  boire leur café. Chaque fois que j’y voyais des touristes coréens, les mots me
+  brûlaient les lèvres. J’avais une envie folle de leur indiquer les vraies
+  bonnes adresses du quartier, celles où l’on boit un excellent café et où l’on
+  mange de délicieuses pâtisseries. Mais je ne me suis jamais mêlée de ce qui ne
+  me regardait pas. Les pauvres.
+
+
+  En face de la boutique, au deuxième étage, vit un monsieur seul. Il a passé
+  toute sa vie rue du Pont-aux-Choux. Son passe-temps est de regarder la rue
+  depuis son étage, et, sauf les jours de froid, il est très souvent torse nu.
+  Il reste là de longs moments, le visage impassible, à contempler la rue, et il
+  arrive souvent que nos regards se croisent. De la boutique, on voit si bien
+  chez lui que lever les yeux vers son deuxième étage est devenu une habitude.
+  Serait-il torse nu aujourd’hui ? Il m’est même arrivé de lire la météo dans
+  son degré de déshabillage.
+
+
+  Si j’ai commencé à saluer cet homme un peu étrange, c’est uniquement par
+  déformation professionnelle. Un jour, en marchant dans la rue, je me suis
+  retrouvée nez à nez avec lui. Sans y penser, un sourire sans âme et un «
+  Bonjour ! » m’ont échappé. Il m’a répondu par un large sourire. Depuis, nous
+  sommes devenus de vrais voisins, de ceux qui se disent bonjour en se croisant.
+  Chaque jour, il continue d’observer la rue depuis son deuxième étage. Je n’ai
+  aucune idée de ce qui peut bien se passer derrière ce visage impassible, mais
+  je sais maintenant que cet homme sait sourire.
+
+
+  C’est au fil des rencontres avec les gens qui passent par la rue du
+  Pont-aux-Choux que j’ai compris qu’il existe des milliers de visages
+  différents, autant de visions du monde, et tant de personnes qui vivent selon
+  leurs propres convictions. Ceux que j’ai rencontrés ici vivaient de façon si
+  singulière qu’ils ont réduit en miettes les murs du monde auquel j’appartenais
+  jusque-là. Comme les ingrédients d’un même saladier, ils se mêlent tout en
+  gardant chacun leur espace, sans jugement hâtif ni critères imposés aux
+  autres, chacun à l’aise avec son propre visage.
+
+
+  C’est l’histoire des gens de la rue du Pont-aux-Choux, mais c’est aussi un
+  énième chapitre de mon apprentissage de la vie.
+
+
+  Je me fais beaucoup moins souvent voler. Les vieilles dames ne m’adressent
+  plus la parole dans la rue. J’ai appris à marcher sans dévisager personne, à
+  détourner les yeux devant les sans-abri qui mendient et les pigeons à qui il
+  manque une patte. Je sais maintenant que les plaies de Paris ont chacune leur
+  histoire. Le temps où je m’abîmais à réagir à chaque souffrance sous mes yeux
+  est révolu.
+
+
+  Dans un avenir très lointain, que restera-t-il de moi dans la rue du
+  Pont-aux-Choux ?
+
+
+  En attendant les histoires qui s’écriront un jour, les gens de la rue du
+  Pont-aux-Choux s’affairent à vivre, aujourd’hui.
 ---
 지금으로부터 약 400년 전, 그러니까 1600년대의 퐁토슈 가는 배추 경작지였습니다. 퐁토슈의 슈(chou)는 프랑스어로 배추를 말하지요. 당시 파리는 지금보다 훨씬 면적이 작았어요. 퐁토슈 가로 진입하기 전 큰길이 400년 전엔 성곽이었습니다. 그러니 퐁토슈 가는 거의 파리의 끄트머리나 다름없었지요. 
 
