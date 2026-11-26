@@ -2,6 +2,7 @@
 title: 이네스의 죽음과 다니엘 아저씨의 새 강아지
 french_title: La mort d’Inès et le nouveau chiot de Daniel
 category: essais
+series: pont-aux-choux
 year: "2026"
 published: true
 french_body: >-
