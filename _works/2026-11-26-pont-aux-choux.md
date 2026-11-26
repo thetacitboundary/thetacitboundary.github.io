@@ -2,6 +2,7 @@
 title: 퐁토슈 가의 사람들
 french_title: Les gens de la rue du Pont-aux-Choux
 category: essais
+series: pont-aux-choux
 year: "2026"
 cover: /media/images/img8503.jpeg
 published: true
