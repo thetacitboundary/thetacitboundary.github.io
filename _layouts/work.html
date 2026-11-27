@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>{{ page.title | escape }} | The Tacit Boundary</title>
+{% assign page_description = page.content | markdownify | strip_html | normalize_whitespace | truncate: 150 %}
+<meta name="description" content="{{ page_description | escape }}">
+<link rel="canonical" href="{{ page.url | absolute_url }}">
+<meta property="og:type" content="article">
+<meta property="og:title" content="{{ page.title | escape }}">
+<meta property="og:description" content="{{ page_description | escape }}">
+<meta property="og:url" content="{{ page.url | absolute_url }}">
+{% if page.cover %}<meta property="og:image" content="{{ page.cover | absolute_url }}">{% endif %}
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;1,400;1,500&family=Noto+Serif+KR:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#dedad3; --ink:#2a2723; --soft:#7a746b; --line:#bdb7ad; --accent:#9a625c;
+  --fr:"Cormorant Garamond","Times New Roman",serif;
+  --ko:"Noto Serif KR","Nanum Myeongjo","Apple Myungjo",serif;
+  color-scheme:light;box-sizing:border-box;
+  padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px);
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#1f1d1a;--ink:#e6e1d8;--soft:#9d978c;--line:#3d3a35;--accent:#d29a92;color-scheme:dark}}
+:root[data-theme="dark"]{--bg:#1f1d1a;--ink:#e6e1d8;--soft:#9d978c;--line:#3d3a35;--accent:#d29a92;color-scheme:dark}
+*{box-sizing:border-box}
+html{scroll-padding-top:env(safe-area-inset-top,0px)}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--ko);font-weight:400;font-size:17px;line-height:1.95;word-break:keep-all;overflow-wrap:break-word;-webkit-text-size-adjust:100%}
+a{color:inherit}
+:focus-visible{outline:2px solid var(--accent);outline-offset:3px}
+.wrap{max-width:680px;margin:0 auto;padding:20px 24px 72px}
+
+/* header */
+.brand{display:block;font-family:var(--fr);font-style:italic;font-size:22px;line-height:1.2;text-decoration:none;margin-bottom:14px}
+body.home .brand{display:none}
+nav{display:flex;gap:26px;border-bottom:1px solid var(--line);padding-bottom:10px}
+nav a{text-decoration:none;display:block;line-height:1.35;padding-bottom:4px;border-bottom:1px solid transparent;margin-bottom:-11px}
+nav .k{display:block;font-size:17px}
+nav .f{display:block;font-family:var(--fr);font-style:italic;font-size:11.5px;color:var(--soft)}
+nav a[aria-current="page"],nav a:hover{border-bottom-color:var(--accent)}
+
+/* typography scale */
+.fr{font-family:var(--fr);font-style:italic;font-weight:400;color:var(--soft)}
+.title-site{font-family:var(--fr);font-style:italic;font-weight:400;font-size:clamp(48px,12vw,58px);line-height:1.08;letter-spacing:-.01em;margin:28px 0 10px;text-align:left}
+.lead{font-family:var(--fr);font-style:italic;font-size:17px;color:var(--soft);margin:0 0 6px;line-height:1.4}
+.home-motto{margin-top:42px;font-size:15px;line-height:1.75;color:var(--ink)}
+.home-motto p{margin:0 0 3px}
+.note{font-family:var(--fr);font-style:italic;font-size:18px;line-height:1.5;color:var(--soft);margin:0 0 32px}
+.intro{margin-top:26px}
+.intro .ko{font-size:16.5px;line-height:1.95;margin:0 0 20px}
+.intro .fr-i{font-family:var(--fr);font-style:normal;font-size:15px;line-height:1.65;color:var(--soft);margin:0}
+.intro-about .ko{font-size:16px;line-height:1.85;margin:0 0 16px}
+.intro-about .fr-i{font-size:14px;line-height:1.6}
+.hist{margin-top:32px}
+.hist p{margin:0;color:var(--soft)}
+.hist .h-ko{font-size:14px;line-height:1.8}
+.hist .h-fr{font-family:var(--fr);font-size:12.5px;line-height:1.6}
+
+h2.sec{display:flex;align-items:baseline;gap:10px;margin:32px 0 0;padding-bottom:8px;border-bottom:1px solid var(--accent);font-weight:500;font-size:22px;line-height:1.4}
+h2.sec .fr{font-size:13px}
+h2.sec a{text-decoration:none}
+.item{display:block;text-decoration:none;padding:12px 0;border-bottom:1px solid var(--line)}
+.item .t{display:block;font-size:16px;font-weight:400;line-height:1.5;text-wrap:balance}
+.item .f{display:block;font-family:var(--fr);font-style:italic;font-size:12px;color:var(--soft);line-height:1.3;margin-top:2px}
+.item .d{font-size:11px;color:var(--soft)}
+.item:hover .t{color:var(--accent)}
+.series-link{display:block;text-decoration:none;padding:16px 0;border-bottom:1px solid var(--line)}
+.series-link .t{display:block;font-size:17px;line-height:1.6}
+.series-link .f{display:block;font:italic 13px/1.5 var(--fr);color:var(--soft)}
+.series-link .hint{display:block;margin-top:5px;font-size:12px;color:var(--soft)}
+.series-link:hover .t{color:var(--accent)}
+.series-entry{margin-top:22px}
+.series-entry .label{font-size:12px;color:var(--soft);margin-bottom:2px}
+.series-intro{font-size:14px;color:var(--soft);line-height:1.8;margin:12px 0 26px}
+.series-crumb{display:inline-block;margin-top:24px;color:var(--soft);font-size:13px;text-decoration:none}
+.series-crumb:hover{text-decoration:underline}
+.empty{color:var(--soft);font-size:15px;padding:20px 0}
+.more{display:inline-block;margin-top:10px;font-size:13px;color:var(--soft);text-decoration:none;border-bottom:1px solid var(--line)}
+.more:hover{color:var(--ink);border-bottom-color:var(--accent)}
+
+article h1{font-size:clamp(25px,6.5vw,30px);font-weight:500;line-height:1.4;margin:32px 0 6px;text-wrap:balance}
+article .ft{font-family:var(--fr);font-style:italic;font-size:18px;color:var(--soft);line-height:1.3;margin:0 0 10px}
+article .meta{font-size:13px;color:var(--soft);padding-bottom:20px;border-bottom:1px solid var(--accent);margin-bottom:36px}
+article p{margin:0 0 1.6em}
+.back{display:inline-block;margin-top:36px;font-size:15px;color:var(--soft)}
+h2.page{font-size:28px;font-weight:500;margin:48px 0 6px}
+p.soft{color:var(--soft);font-size:15px}
+footer{margin-top:64px;padding-top:16px;border-top:1px solid var(--line);font-size:14px;color:var(--soft);display:flex;gap:18px;flex-wrap:wrap}
+footer a{text-decoration:none;font-family:var(--fr);font-style:italic;font-size:15px}footer a:hover{color:var(--ink);text-decoration:underline;text-decoration-color:var(--accent);text-underline-offset:4px}
+footer .fr{font-size:15px}
+@media (min-width:720px){body{font-size:18px}.wrap{padding-top:32px}.title-site{margin-top:48px}}
+article .body{font-size:15.5px;line-height:1.9;word-break:normal;overflow-wrap:break-word}
+article .body p{margin:0 0 1em}
+article .body p:empty{display:none}
+article .translation p{margin:0 0 1.6em}
+article .body img,article .translation img{max-width:100%;height:auto}
+article .media{margin:24px auto 36px}
+article .media video{width:100%;height:auto;max-height:75vh;max-width:360px;display:block;margin:auto;background:#161616}
+article .media img{max-width:100%;height:auto;display:block;margin:auto}
+article .translation{border-top:1px solid var(--line);margin-top:42px;padding-top:24px;font-size:15px}
+article .translation>.fr{font-size:18px;margin-bottom:16px}
+</style>
+</head>
+<body>
+<div class="wrap">
+<a class="brand" href="{{ '/' | relative_url }}">The Tacit Boundary</a>
+<nav aria-label="분류">
+<a href="{{ '/#essais' | relative_url }}"><span class="k">에세이</span><span class="f">Essais</span></a>
+<a href="{{ '/#fiction' | relative_url }}"><span class="k">소설</span><span class="f">Fiction</span></a>
+<a href="{{ '/#projets' | relative_url }}"><span class="k">프로젝트</span><span class="f">Projets</span></a>
+</nav>
+<main>
+<article>
+<h1>{{ page.title | escape }}</h1>
+{% if page.french_title %}<p class="ft" lang="fr">{{ page.french_title | escape }}</p>{% endif %}
+<div class="meta">{% if page.category == 'essais' %}에세이{% elsif page.category == 'fiction' %}소설{% else %}프로젝트{% endif %} · {{ page.year | escape }}</div>
+{% if page.note %}<p class="note">{{ page.note | escape }}</p>{% endif %}
+{% if page.cover %}<div class="media"><img src="{{ page.cover | relative_url }}" alt=""></div>{% endif %}
+{% if page.video %}<div class="media"><video controls preload="metadata" playsinline src="{{ page.video | relative_url }}"></video></div>{% endif %}
+<div class="body">{{ content }}</div>
+{% if page.french_body %}<div class="translation" lang="fr">{{ page.french_body | markdownify }}</div>{% endif %}
+{% if page.series == 'pont-aux-choux' %}<a class="back" href="{{ '/#series-pont-aux-choux' | relative_url }}">← 퐁토슈 가의 사람들</a>
+{% elsif page.category == 'essais' %}<a class="back" href="{{ '/#essais' | relative_url }}">← 에세이</a>
+{% elsif page.category == 'fiction' %}<a class="back" href="{{ '/#fiction' | relative_url }}">← 소설</a>
+{% else %}<a class="back" href="{{ '/#projets' | relative_url }}">← 프로젝트</a>{% endif %}
+</article>
+</main>
+<footer><a href="{{ '/#about' | relative_url }}">À propos</a><a href="{{ '/#contact' | relative_url }}">Contact</a><span class="fr">© The Tacit Boundary</span></footer>
+</div>
+</body>
+</html>
