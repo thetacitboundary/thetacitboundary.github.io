@@ -4,6 +4,13 @@ baseurl: ""
 markdown: kramdown
 collections:
   works:
-    output: false
+    output: true
+    permalink: /works/:name/
+defaults:
+  - scope:
+      path: ""
+      type: works
+    values:
+      layout: work
 exclude:
   - README.md
