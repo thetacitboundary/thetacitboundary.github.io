@@ -6,7 +6,12 @@ layout: null
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>The Tacit Boundary</title>
+<title>The Tacit Boundary | 에세이 · 소설 · 미학</title>
+<meta name="description" content="The Tacit Boundary. 파리에서 쓰는 에세이, 소설, 미학. 한국어와 프랑스어로 만나는 글.">
+<link rel="canonical" href="{{ '/' | absolute_url }}">
+<meta property="og:type" content="website">
+<meta property="og:title" content="The Tacit Boundary">
+<meta property="og:description" content="Écrire depuis l’entre-deux. 에세이, 소설, 미학.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;1,400;1,500&family=Noto+Serif+KR:wght@300;400;500&display=swap" rel="stylesheet">
 <style>
@@ -113,7 +118,7 @@ var CATS=[{id:'essais',ko:'에세이',fr:'Essais'},{id:'fiction',ko:'소설',fr:
 var POSTS=[
 {% for work in site.works %}
 {% unless work.published == false %}
-{id:{{ work.slug | jsonify }},cat:{{ work.category | jsonify }},ko:{{ work.title | jsonify }},fr:{{ work.french_title | default: '' | jsonify }},date:{{ work.year | default: '' | jsonify }},note:{{ work.note | default: '' | jsonify }},video:{{ work.video | default: '' | jsonify }},cover:{{ work.cover | default: '' | jsonify }},series:{{ work.series | default: '' | jsonify }},body:{{ work.content | markdownify | jsonify }},frBody:{{ work.french_body | default: '' | markdownify | jsonify }}},
+{id:{{ work.slug | jsonify }},cat:{{ work.category | jsonify }},ko:{{ work.title | jsonify }},fr:{{ work.french_title | default: '' | jsonify }},date:{{ work.year | default: '' | jsonify }},note:{{ work.note | default: '' | jsonify }},video:{{ work.video | default: '' | jsonify }},cover:{{ work.cover | default: '' | jsonify }},url:{{ work.url | relative_url | jsonify }},series:{{ work.series | default: '' | jsonify }},body:{{ work.content | markdownify | jsonify }},frBody:{{ work.french_body | default: '' | markdownify | jsonify }}},
 {% endunless %}
 {% endfor %}
 ];
@@ -126,7 +131,7 @@ function seriesById(id){return SERIES.filter(function(s){return s.id===id})[0]}
 function seriesOf(p){return p.series||(p.id==='2026-11-26-ines-last-winter'?'pont-aux-choux':'')}
 function bySeries(id){return POSTS.filter(function(p){return seriesOf(p)===id}).sort(function(a,b){return a.id===seriesById(id).intro?-1:b.id===seriesById(id).intro?1:String(a.id).localeCompare(String(b.id))})}
 function cat(id){return CATS.filter(function(c){return c.id===id})[0]}
-function item(p){return '<a class="item" href="#'+encodeURIComponent(p.id)+'"><span class="t">'+esc(p.ko)+'</span><span class="f">'+(p.fr?esc(p.fr)+' · ':'')+'<span class="d">'+esc(p.date)+'</span></span></a>'}
+function item(p){return '<a class="item" href="'+esc(p.url||('#'+encodeURIComponent(p.id)))+'"><span class="t">'+esc(p.ko)+'</span><span class="f">'+(p.fr?esc(p.fr)+' · ':'')+'<span class="d">'+esc(p.date)+'</span></span></a>'}
 function byCat(id){return POSTS.filter(function(p){return p.cat===id}).sort(function(a,b){return String(b.date).localeCompare(String(a.date))})}
 function list(id){
   if(id!=='essais'){var l=byCat(id);return l.length?l.map(item).join(''):'<div class="empty">아직 올린 글이 없어요.</div>'}
