@@ -131,7 +131,7 @@ function seriesById(id){return SERIES.filter(function(s){return s.id===id})[0]}
 function seriesOf(p){return p.series||(p.id==='2026-11-26-ines-last-winter'?'pont-aux-choux':'')}
 function bySeries(id){return POSTS.filter(function(p){return seriesOf(p)===id}).sort(function(a,b){return a.id===seriesById(id).intro?-1:b.id===seriesById(id).intro?1:String(a.id).localeCompare(String(b.id))})}
 function cat(id){return CATS.filter(function(c){return c.id===id})[0]}
-function item(p){return '<a class="item" href="'+esc(p.url||('#'+encodeURIComponent(p.id)))+'"><span class="t">'+esc(p.ko)+'</span><span class="f">'+(p.fr?esc(p.fr)+' · ':'')+'<span class="d">'+esc(p.date)+'</span></span></a>'}
+function item(p){return '<a class="item" href="/#'+encodeURIComponent(p.id)+'"><span class="t">'+esc(p.ko)+'</span><span class="f">'+(p.fr?esc(p.fr)+' · ':'')+'<span class="d">'+esc(p.date)+'</span></span></a>'}
 function byCat(id){return POSTS.filter(function(p){return p.cat===id}).sort(function(a,b){return String(b.date).localeCompare(String(a.date))})}
 function list(id){
   if(id!=='essais'){var l=byCat(id);return l.length?l.map(item).join(''):'<div class="empty">아직 올린 글이 없어요.</div>'}
