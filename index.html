@@ -138,7 +138,7 @@ function render(){
   var h=(location.hash||'#home').slice(1),tab=h,html='',post=POSTS.filter(function(p){return p.id===h})[0];
   document.body.className=(h==='home'||!h)?'home':'';
   if(h==='home'){
-    html='<h1 class="title-site">The Tacit<br>Boundary</h1><p class="lead">Écrire depuis l’entre-deux.</p><div class="intro"><p class="ko">파리에서 한국어로 에세이와 소설을 쓴다. 익숙한 것에서 발견되는 낯섦, 경계에 놓인 존재들과 그들을 바라보는 시선에 관심이 있다.</p><p class="fr-i" lang="fr">J’écris à Paris, en coréen, des essais et de la fiction.<br>Je m’intéresse à l’étrangeté que l’on découvre dans le familier, aux êtres qui se tiennent à la lisière, et au regard qu’on porte sur eux.</p></div>';
+    html='<h1 class="title-site">The Tacit<br>Boundary</h1><p class="lead">Écrire depuis l’entre-deux.</p>';
   }else if(cat(h)){
     var c=cat(h);html='<h2 class="sec" style="margin-top:40px"><span>'+c.ko+'</span><span class="fr">'+c.fr+'</span></h2>'+list(h);
   }else if(seriesByHash(h)){
