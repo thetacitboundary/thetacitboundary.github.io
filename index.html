@@ -39,6 +39,8 @@ nav a[aria-current="page"],nav a:hover{border-bottom-color:var(--accent)}
 .fr{font-family:var(--fr);font-style:italic;font-weight:400;color:var(--soft)}
 .title-site{font-family:var(--fr);font-style:italic;font-weight:400;font-size:clamp(48px,12vw,58px);line-height:1.08;letter-spacing:-.01em;margin:28px 0 10px;text-align:left}
 .lead{font-family:var(--fr);font-style:italic;font-size:17px;color:var(--soft);margin:0 0 6px;line-height:1.4}
+.home-motto{margin-top:42px;font-size:15px;line-height:1.75;color:var(--ink)}
+.home-motto p{margin:0 0 3px}
 .note{font-family:var(--fr);font-style:italic;font-size:18px;line-height:1.5;color:var(--soft);margin:0 0 32px}
 .intro{margin-top:26px}
 .intro .ko{font-size:16.5px;line-height:1.95;margin:0 0 20px}
@@ -138,7 +140,7 @@ function render(){
   var h=(location.hash||'#home').slice(1),tab=h,html='',post=POSTS.filter(function(p){return p.id===h})[0];
   document.body.className=(h==='home'||!h)?'home':'';
   if(h==='home'){
-    html='<h1 class="title-site">The Tacit<br>Boundary</h1><p class="lead">Écrire depuis l’entre-deux.</p>';
+    html='<h1 class="title-site">The Tacit<br>Boundary</h1><p class="lead">Écrire depuis l’entre-deux.</p><div class="home-motto"><p>에세이, 소설, 미학.</p><p>모든 경계 위의 위태로운 것들.</p></div>';
   }else if(cat(h)){
     var c=cat(h);html='<h2 class="sec" style="margin-top:40px"><span>'+c.ko+'</span><span class="fr">'+c.fr+'</span></h2>'+list(h);
   }else if(seriesByHash(h)){
